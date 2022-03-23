@@ -156,13 +156,13 @@
         add.addEventListener("click", getandupdate);
         update();
         //delete data
-        function deleted(itemIndex) {
-            console.log("Deleted", itemIndex);
+        function deleted(itemIndex){
+            console.log("Delete", itemIndex);
             itemJsonArrayStr = localStorage.getItem('itemsJson')
             itemJsonArray = JSON.parse(itemJsonArrayStr);
             //dlete itemindex element from the array
             itemJsonArray.splice(itemIndex, 1);
-            localStorage.setItem('itemJson', JSON.stringify(itemJsonArray));
+            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
             update();
         }
         function clearStorage() {
